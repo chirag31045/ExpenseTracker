@@ -50,7 +50,7 @@
 
 <h2>📂 Project Structure</h2>
 
-```plaintext
+plaintext
 src/
 ├── controller/
 │   └── ExpenseController.java
@@ -65,7 +65,7 @@ src/
 │   └── ExpenseDTO.java
 └── Application.java
 
-<h2>🔧 Setup Instructions</h2> <ol> <li>Clone the repository: <pre><code>git clone https://github.com/your-username/expense-tracker.git</code></pre> </li> <li>Configure <code>application.properties</code>: <pre><code> spring.datasource.url=jdbc:mysql://localhost:3306/expense_db spring.datasource.username=root spring.datasource.password=yourpassword twilio.whatsapp.number=+14155238886 </code></pre> </li> <li>Run the project: <pre><code>./mvnw spring-boot:run</code></pre> </li> <li>Access it in browser: <code>http://localhost:8080</code></li> </ol>
+<h2>🔧 Setup Instructions</h2> <ol> <li>Clone the repository: <pre><code>git clone https://github.com/your-username/expense-tracker.git</code></pre> </li> <li>Configure <code>application.properties</code>: <pre><code> spring.datasource.url=jdbc:mysql://localhost:3306/expense_db spring.datasource.username=root spring.datasource.password=yourpassword twilio.whatsapp.number=+14155238886 </code></pre> </li> <li>Run the project: <pre><code>./mvnw spring-boot:run</code></pre> </li> <li>Access it in browser: <code>http://localhost:8080</code></li> </ol> 
 
 <h2>📬 WhatsApp Integration</h2> <ul> <li>Setup a Twilio account and enable sandbox for WhatsApp.</li> <li>Get your Account SID, Auth Token, and Sandbox WhatsApp number.</li> <li>Configure them in your environment or <code>application.properties</code>.</li> </ul>
 
@@ -75,4 +75,4 @@ src/
 
 <h2>📄 License</h2> <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details.</p>
 
-<h2>📞 Contact</h2> <p> Developed with ❤️ by <strong>ChiragKumawat</strong><br> 📧 chiragkumawat457@gmail.com<br> 🌐 <a href="https://www.linkedin.com/in/chirag-kumawat-b58401263">LinkedIn</a> </p> ```
+<h2>📞 Contact</h2> <p> Developed with ❤️ by <strong>ChiragKumawat</strong><br> 📧 chiragkumawat457@gmail.com<br> 🌐 <a href="https://www.linkedin.com/in/chirag-kumawat-b58401263">LinkedIn</a> </p> 
