@@ -1,4 +1,4 @@
-📊 Expense Tracker Application
+<h1>📊 Expense Tracker Application</h1>
 A full-stack Expense Tracker application built using Java, Spring Boot, and MySQL, with optional integration for WhatsApp alerts. This application allows users to manage personal expenses, categorize them, and get real-time notifications.
 
 🧾 Table of Contents
@@ -44,10 +44,6 @@ Messaging: Twilio API for WhatsApp notifications
 
 Others: Postman, Swagger (optional)
 
-📁 Project Structure
-swift
-Copy
-Edit
 src/
  └── main/
      ├── java/in/erp/com/
@@ -62,63 +58,54 @@ src/
      └── resources/
          ├── application.properties
          └── data.sql (optional for dummy data)
+
 ⚙️ Installation & Setup
 Clone the repo
 
-bash
-Copy
-Edit
 git clone https://github.com/your-username/expense-tracker.git
 cd expense-tracker
+
 Create MySQL database
 
-sql
-Copy
-Edit
 CREATE DATABASE expense_tracker;
+
 Configure application.properties
 
-properties
-Copy
-Edit
 spring.datasource.url=jdbc:mysql://localhost:3306/expense_tracker
 spring.datasource.username=root
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
+
 Run the application
 
-bash
-Copy
-Edit
 mvn spring-boot:run
+
 🔌 API Endpoints
-Method	Endpoint	Description
-POST	/api/users/register	Register a new user
-POST	/api/expenses/{userId}	Add expense for a user
-GET	/api/expenses/{userId}	Get expenses by user ID
-PUT	/api/expenses/{expenseId}	Update an expense
-DELETE	/api/expenses/{expenseId}	Delete an expense
+| Method | Endpoint                    | Description             |
+| ------ | --------------------------- | ----------------------- |
+| POST   | `/api/users/register`       | Register a new user     |
+| POST   | `/api/expenses/{userId}`    | Add expense for a user  |
+| GET    | `/api/expenses/{userId}`    | Get expenses by user ID |
+| PUT    | `/api/expenses/{expenseId}` | Update an expense       |
+| DELETE | `/api/expenses/{expenseId}` | Delete an expense       |
+
 
 📬 Sample Postman Request
 POST /api/expenses/1
-json
-Copy
-Edit
 {
   "amount": 1500,
   "description": "Groceries",
   "category": "Food",
   "date": "2025-06-10"
 }
+
 Response:
-json
-Copy
-Edit
 {
   "message": "Expense added and WhatsApp alert sent."
 }
+
 🤝 Contributing
 Contributions are welcome! Fork the repo, make your changes, and open a pull request.
 
 🪪 License
-This project is open source under the MIT License.
+This project is open source under the Chirag.
