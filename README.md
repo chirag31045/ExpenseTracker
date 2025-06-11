@@ -1,133 +1,124 @@
-💸 Smart Expense Tracker (Java + Spring Boot)
-A full-stack Expense Tracker application built with Java, Spring Boot, and MySQL, enabling users to track daily expenses and receive WhatsApp alerts.
+📊 Expense Tracker Application
+A full-stack Expense Tracker application built using Java, Spring Boot, and MySQL, with optional integration for WhatsApp alerts. This application allows users to manage personal expenses, categorize them, and get real-time notifications.
 
-📌 Features
-User registration & login
+🧾 Table of Contents
+Features
+
+Tech Stack
+
+Screenshots
+
+Project Structure
+
+Installation & Setup
+
+API Endpoints
+
+Sample Postman Request
+
+Contributing
+
+License
+
+🚀 Features
+User registration and login
 
 Add, update, delete expenses
 
-View expense history by date, category, or range
+Categorize expenses
 
-Daily WhatsApp alert on new expense
+Monthly summary
 
-RESTful APIs using Spring Boot
+Real-time WhatsApp alerts via Twilio (optional)
 
-MySQL Database integration
-
-Exception handling & validation
+REST API-based architecture
 
 🛠️ Tech Stack
-Layer	Technology
-Backend	Java, Spring Boot
-REST API	Spring Web
-Database	MySQL
-Messaging	Twilio WhatsApp API
-ORM	Spring Data JPA
-Validation	Hibernate Validator
-Build Tool	Maven
+Backend: Java, Spring Boot, Spring Data JPA
+
+Database: MySQL
+
+Frontend (optional): React / Angular / Thymeleaf
+
+Messaging: Twilio API for WhatsApp notifications
+
+Others: Postman, Swagger (optional)
 
 📁 Project Structure
-css
+swift
 Copy
 Edit
-expense-tracker/
-├── src/
-│   ├── main/
-│   │   ├── java/in/erp/com/
-│   │   │   ├── controller/
-│   │   │   ├── entity/
-│   │   │   ├── repository/
-│   │   │   ├── service/
-│   │   ├── resources/
-│   │   │   ├── application.properties
-├── pom.xml
-├── README.md
-⚙️ Setup Instructions
-Clone the Repository
+src/
+ └── main/
+     ├── java/in/erp/com/
+     │   ├── controller/
+     │   │   └── ExpenseController.java
+     │   ├── entity/
+     │   │   └── Expense.java
+     │   ├── repository/
+     │   │   └── ExpenseRepository.java
+     │   └── service/
+     │       └── ExpenseService.java
+     └── resources/
+         ├── application.properties
+         └── data.sql (optional for dummy data)
+⚙️ Installation & Setup
+Clone the repo
 
 bash
 Copy
 Edit
 git clone https://github.com/your-username/expense-tracker.git
 cd expense-tracker
-Configure the Database
-Update src/main/resources/application.properties:
+Create MySQL database
+
+sql
+Copy
+Edit
+CREATE DATABASE expense_tracker;
+Configure application.properties
 
 properties
 Copy
 Edit
-spring.datasource.url=jdbc:mysql://localhost:3306/expense_db
+spring.datasource.url=jdbc:mysql://localhost:3306/expense_tracker
 spring.datasource.username=root
-spring.datasource.password=yourpassword
-
+spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-Run the App
+Run the application
 
 bash
 Copy
 Edit
 mvn spring-boot:run
-API Testing
-Use Postman or Swagger to test endpoints.
-
-🔗 Sample API Endpoints
+🔌 API Endpoints
 Method	Endpoint	Description
 POST	/api/users/register	Register a new user
-POST	/api/expenses/{userId}	Add new expense
-GET	/api/expenses/{userId}	Get all expenses
-DELETE	/api/expenses/{userId}/{id}	Delete a specific expense
-PUT	/api/expenses/{userId}/{id}	Update an expense
+POST	/api/expenses/{userId}	Add expense for a user
+GET	/api/expenses/{userId}	Get expenses by user ID
+PUT	/api/expenses/{expenseId}	Update an expense
+DELETE	/api/expenses/{expenseId}	Delete an expense
 
-📦 Sample Expense Payload
+📬 Sample Postman Request
+POST /api/expenses/1
 json
 Copy
 Edit
 {
-  "title": "Grocery Shopping",
-  "amount": 450.50,
+  "amount": 1500,
+  "description": "Groceries",
   "category": "Food",
-  "date": "2025-06-11"
+  "date": "2025-06-10"
 }
-🔔 WhatsApp Alert Setup (via Twilio)
-Sign up on Twilio
-
-Get Account SID, Auth Token, and a WhatsApp Sandbox number
-
-Configure in application.properties:
-
-properties
+Response:
+json
 Copy
 Edit
-twilio.account.sid=your_sid
-twilio.auth.token=your_token
-twilio.whatsapp.from=whatsapp:+14155238886
-Send message in ExpenseService after saving expense:
+{
+  "message": "Expense added and WhatsApp alert sent."
+}
+🤝 Contributing
+Contributions are welcome! Fork the repo, make your changes, and open a pull request.
 
-java
-Copy
-Edit
-twilioService.sendWhatsAppMessage("+91xxxxxxxxxx", "New expense added: ₹450.50");
-📸 Screenshots (Optional)
-Include screenshots of:
-
-Postman API test
-
-WhatsApp alert message
-
-JSON response
-
-🚀 Future Enhancements
-Add monthly summary & charts
-
-Google authentication
-
-Email notifications
-
-Expense limit alerts
-
-👨‍💻 Author
-Chirag Kumawat
-Master of Computer Applications (MCA)
-LinkedIn | GitHub
-
+🪪 License
+This project is open source under the MIT License.
