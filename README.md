@@ -69,7 +69,7 @@ src/
 
 <h2>📬 WhatsApp Integration</h2> <ul> <li>Setup a Twilio account and enable sandbox for WhatsApp.</li> <li>Get your Account SID, Auth Token, and Sandbox WhatsApp number.</li> <li>Configure them in your environment or <code>application.properties</code>.</li> </ul>
 
-<h2>📸 Screenshots</h2> <p align="center"> <img src="https://yourdomain.com/assets/dashboard.png" alt="Dashboard Screenshot" width="80%"/> <img src="https://yourdomain.com/assets/add-expense.png" alt="Add Expense Screenshot" width="80%"/> </p>
+<h2>📸 Screenshots</h2> <p align="center"> <img src="https://github.com/chirag31045/ExpenseTracker/blob/8a3d732ec05177c9446c9fa901a08e2c1cc3965e/Screenshot%20(775).png" alt="Dashboard Screenshot" width="80%"/> <img src="https://github.com/chirag31045/ExpenseTracker/blob/8a3d732ec05177c9446c9fa901a08e2c1cc3965e/Screenshot%20(777).png" alt="Report Screenshot" width="80%"/>  <img src="https://github.com/chirag31045/ExpenseTracker/blob/8a3d732ec05177c9446c9fa901a08e2c1cc3965e/Screenshot%20(776).png" alt="whatsApp Alert Screenshot" width="80%"/>  </p>
 
 <h2>🤝 Contributing</h2> <p>Feel free to fork the repo and submit a pull request. Open an issue first if you want to make significant changes.</p>
 
